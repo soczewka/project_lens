@@ -1,5 +1,5 @@
 """
-Django settings for my_project project.
+Django settings for projekt project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -17,15 +17,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'nuwby#@v5qlm$7bmw*pq0((*$sb@_w=uui94_u9(32*_-jm9%x'
+SECRET_KEY = '2y--#g)z*y2y@bc1uyxpbsap@5hyqg854dcy5bucnm+)9eg_$$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -36,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -47,9 +49,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'my_project.urls'
+ROOT_URLCONF = 'projekt.urls'
 
-WSGI_APPLICATION = 'my_project.wsgi.application'
+WSGI_APPLICATION = 'projekt.wsgi.application'
 
 
 # Database
